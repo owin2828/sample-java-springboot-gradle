@@ -1,0 +1,22 @@
+---
+# Database Setting
+spring:
+   datasource: 
+      url: jdbc:mysql://${DB_IP}:3306/test1?useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC&createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true
+      username: root
+      password: 1324qwer
+   jpa:
+      hibernate:
+         dll-auto: none
+         naming:
+            physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      generate-ddl: true
+      show-sql: false
+      database: mysql
+      database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+      properties: 
+         hibernate: 
+            format_sql: true
+            enable_lazy_load_no_trans: true
+   thymeleaf: 
+      cache: false

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>SB Admin - Tables</title>
+
+<!-- Bootstrap core CSS-->
+<link href="/bootstrap/vendor/bootstrap/css/bootstrap.min.css"
+	rel="stylesheet">
+
+<!-- Custom fonts for this template-->
+<link href="/bootstrap/vendor/fontawesome-free/css/all.min.css"
+	rel="stylesheet" type="text/css">
+
+<!-- Page level plugin CSS-->
+<link href="/bootstrap/vendor/datatables/dataTables.bootstrap4.css"
+	rel="stylesheet">
+
+<!-- Custom styles for this template-->
+<link href="/bootstrap/css/sb-admin.css" rel="stylesheet">
+</head>
+<body class="bg-dark">
+
+	<div class="container">
+		<div class="card card-register mx-auto mt-5">
+			<div class="card-header">Register an Account</div>
+			<div class="card-body">
+				<form th:action="@{/editCom}" method="post">
+					<div class="form-group">
+						<div>ID</div>
+						<div class="form-row">
+							<div class="col-md-12">
+								<div class="form-label-group">
+									<input type="hidden" th:value="${member.no}" name="no" /> 
+									<input
+										type="text" id="user_id" name="user_id" class="form-control"
+										required="required" disabled="disabled" autofocus="autofocus"
+										th:value="${member.user_id}"> <label for="firstName"></label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div>NAME</div>
+						<div class="form-row">
+							<div class="col-md-12">
+								<div class="form-label-group">
+									<input type="text" id="user_name" name="user_name"
+										class="form-control" required="required" autofocus="autofocus"
+										th:value="${member.user_name}"> <label for="firstName"></label>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="form-group">
+						<div>Position</div>
+						<div class="form-row">
+							<div class="col-md-12">
+								<div class="form-label-group">
+									<input type="text" id="position" name="position"
+										class="form-control" required="required" autofocus="autofocus"
+										th:value="${member.position}"> <label for="firstName"></label>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="form-group">
+						<div>Email</div>
+						<div class="form-row">
+							<div class="col-md-12">
+								<div class="form-label-group">
+									<input type="text" id="email" name="email" class="form-control"
+										required="required" autofocus="autofocus"
+										th:value="${member.email}"> <label for="firstName"></label>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="form-group">
+						<div>Age</div>
+						<div class="form-row">
+							<div class="col-md-12">
+								<div class="form-label-group">
+									<input type="text" id="age" name="age" class="form-control"
+										required="required" autofocus="autofocus"
+										th:value="${member.age}"> <label for="firstName"></label>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="form-group">
+						<div>Address</div>
+						<div class="form-row">
+							<div class="col-md-12">
+								<div class="form-label-group">
+									<input type="text" id="address" name="address"
+										class="form-control" required="required" autofocus="autofocus"
+										th:value="${member.address}"> <label for="firstName"></label>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="form-group">
+						<div>Content</div>
+						<div class="form-row">
+							<div class="col-md-12">
+								<div class="form-label-group">
+									<input type="text" id="content" name="content"
+										class="form-control" required="required" autofocus="autofocus"
+										th:value="${member.content}"> <label for="firstName"></label>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<input type="submit" value="Edit" class="btn btn-primary btn-block"
+						onclick="javascript:close()" />
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- Bootstrap core JavaScript-->
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Core plugin JavaScript-->
+	<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+</body>
+
+</html>

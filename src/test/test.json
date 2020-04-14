@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "db8982db-092a-47f1-a26f-cb18274d6917",
+		"name": "localhost API Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Request All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}:8080/",
+					"host": [
+						"{{url}}"
+					],
+					"port": "8080",
+					"path": [
+						""
+					]
+				},
+				"description": "Request All "
+			},
+			"response": []
+		},
+		{
+			"name": "Insert content",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}:8080/join?user_id=API_TEST&user_name=Bob Parr",
+					"host": [
+						"{{url}}"
+					],
+					"port": "8080",
+					"path": [
+						"join"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "API_TEST"
+						},
+						{
+							"key": "user_name",
+							"value": "Bob Parr"
+						}
+					]
+				},
+				"description": "Insert content"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Content",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}:8080/delete/5",
+					"host": [
+						"{{url}}"
+					],
+					"port": "8080",
+					"path": [
+						"delete",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Content",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}:8080/update?no=6&user_id=API_TEST&user_name=UPDATE_COMPLETE",
+					"host": [
+						"{{url}}"
+					],
+					"port": "8080",
+					"path": [
+						"update"
+					],
+					"query": [
+						{
+							"key": "no",
+							"value": "6"
+						},
+						{
+							"key": "user_id",
+							"value": "API_TEST"
+						},
+						{
+							"key": "user_name",
+							"value": "UPDATE_COMPLETE"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}:8080/search/7",
+					"host": [
+						"{{url}}"
+					],
+					"port": "8080",
+					"path": [
+						"search",
+						"7"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
